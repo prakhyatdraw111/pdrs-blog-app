@@ -1,0 +1,32 @@
+<h2>Welcome to pdr's blog app</h2>
+
+<div class="author">
+
+    <h3 style="margin-left: 25%;">I am pdr, who is learning node.js, express and firebase</h3>
+
+</div>
+
+<div class="posts">
+
+    <h3>Latest Posts</h3>
+
+    <ul>
+
+        <% listOfDocs.forEach(doc => { %>
+
+            <li>
+                
+                <a href="/blog/<%= doc.id %>">
+
+                    <%= doc.data()["blogTitle"] %> - <%= new Date(Number(doc.data()["postDate"]) * 1000) %>
+                    
+                </a>
+
+            </li> 
+
+        <% }); %>
+
+    </ul>
+
+    <a href="/blog" class="pagination">View latest posts</a>
+</div>

@@ -1,0 +1,15 @@
+<h1>Blogs</h1>
+
+<p> Find a blog from here </p>
+
+<ul>
+
+    <% listOfAllDocs.forEach( doc => { %>
+
+    <li><a href="/blog/<%= doc.id %>"><%= doc.data()["blogTitle"] %> - <%= new Date(doc.data()["postDate"] * 1000) %></a></li>
+
+    <% }); %>
+
+</ul>
+
+<a>

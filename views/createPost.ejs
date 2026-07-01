@@ -1,0 +1,19 @@
+<h1>Create post</h1>
+
+<% if (!loggedIn) { %>
+
+<h2> Admin login required </h2>
+
+<% } else { %>
+
+<form action="/createpost" method="post">
+
+    <input type="text" placeholder="Blog title" name="blogTitle" required><br><br>
+
+    <textarea rows="10" cols="100" placeholder="Type blog here..." name="blog" required></textarea><br><br>
+
+    <input type="submit">
+
+</form>
+
+<% } %>

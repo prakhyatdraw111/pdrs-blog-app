@@ -1,0 +1,39 @@
+<header class="header">
+
+    <h1>Pdr's blog app</h1>
+
+    <nav class="navigation">
+
+        <a style="margin-right: 5%; text-decoration: none;" href="/">Home</a>
+
+        <a style="margin-right: 5%; text-decoration: none;" href="/about">About</a>
+
+        <form style="display: inline;" action="/search" method="POST">
+
+            <input type="text" name="q" placeholder="Search posts...">
+
+            <button type="submit">Search</button>
+
+        </form>
+
+        <% if (loggedIn) { %>
+
+        <a style="margin-left: 5%; text-decoration: none;" href="/logout">Log Out</a>
+
+        <% } else { %>
+
+        <a style="margin-left: 5%; text-decoration: none;" href="/login">Log In as Admin</a>
+
+        <% } %>
+
+        <% if (loggedIn) { %>
+
+            <a style="margin-left: 5%; text-decoration: none;" href="/createpost">Create Post</a>
+
+            <span style="margin-left: 10%;">Logged in as admin</span> 
+
+         <% } %>
+
+    </nav>
+
+</header>

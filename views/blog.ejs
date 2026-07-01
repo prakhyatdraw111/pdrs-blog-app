@@ -1,0 +1,7 @@
+<h1>Blogs</h1>
+
+<h2><%- document.data()["blogTitle"] %></h2>
+
+<h3>posted on: <%- new Date(document.data()["postDate"] * 1000) %></h3>
+
+<p><%- document.data()["blog"] %></p>

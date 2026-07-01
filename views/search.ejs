@@ -1,0 +1,14 @@
+<h1>Blogs</h1>
+
+<h2> Search results for: <%= searchQuery %> </h2>
+
+<ul>
+
+    <% filteredDocs.forEach( doc => { %>
+
+    <li><a href="/blog/<%= doc.id %>"><%= doc.data()["blogTitle"] %> - <%= new Date(doc.data()["postDate"] * 1000) %></a></li>
+
+    <% }); %>
+
+</ul>
+
