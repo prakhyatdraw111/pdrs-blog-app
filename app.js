@@ -1,5 +1,3 @@
-require("dotenv").config(); // for the .env file to work
-
 const express = require("express");
 
 const expressLayouts = require("express-ejs-layouts");
